@@ -1,0 +1,40 @@
+plugins {
+    id 'org.springframework.boot' version '2.4.1'
+    id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+    id 'java'
+    id 'war'
+}
+
+
+group = 'ua.tntu'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+ext['hibernate.version'] = '5.4.27.Final'
+
+configurations {
+
+}
+
+dependencies {
+   // compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '+'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '+'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '+'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: '+'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-aop', version: '+'
+
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.18.16'
+    compile group: 'com.google.guava', name: 'guava', version: '+'
+
+   // compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.22'
+    providedCompile group: 'javax', name: 'javaee-api', version: '8.0.1'
+
+}
+
+test {
+    useJUnitPlatform()
+}
