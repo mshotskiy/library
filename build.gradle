@@ -14,6 +14,7 @@ targetCompatibility = '1.8'
 repositories {
     mavenCentral()
 }
+
 ext['hibernate.version'] = '5.4.27.Final'
 
 configurations {
@@ -21,7 +22,7 @@ configurations {
 }
 
 dependencies {
-   // compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '+'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '+'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '+'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '+'
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: '+'
@@ -30,7 +31,7 @@ dependencies {
     compile group: 'org.projectlombok', name: 'lombok', version: '1.18.16'
     compile group: 'com.google.guava', name: 'guava', version: '+'
 
-   // compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.22'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.22'
     providedCompile group: 'javax', name: 'javaee-api', version: '8.0.1'
 
 }
