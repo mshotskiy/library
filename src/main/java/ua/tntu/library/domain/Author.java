@@ -28,8 +28,8 @@ public class Author {
 
     private Date birthday;
 
-    @Basic(fetch = FetchType.LAZY)
-    @OneToMany(mappedBy = "author")
+
+    @OneToMany(mappedBy = "author",fetch = FetchType.LAZY)
     private List<Book> books;
 
 }

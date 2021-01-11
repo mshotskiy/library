@@ -82,7 +82,7 @@ public class Book {
     @Column(name = "view_count")
     private long viewCount;
 
-    @Column(name = "total_raiting")
+    @Column(name = "total_rating")
     private long totalRating;
 
     @Column(name = "total_vote_count")
