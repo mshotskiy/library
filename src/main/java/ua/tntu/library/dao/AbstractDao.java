@@ -18,5 +18,5 @@ public interface AbstractDao<T> {
 
     Page<T> getAll(int pageNumber, int pageSize, String sortField, Sort.Direction sortDirection);
 
-    Page<T> getAll(int pageNumber, int pageSize, String sortField, Sort.Direction sortDirection, String... searchString);
+    Page<T> search(int pageNumber, int pageSize, String sortField, Sort.Direction sortDirection, String... searchString);
 }
